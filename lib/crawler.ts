@@ -1,4 +1,4 @@
-import { v4 as uuidv4 } from 'uuid';
+import crypto from 'crypto';
 import { buildRobotsChecker } from './robots';
 import { discoverProductLinks } from './sephora/discover';
 import { parseProduct } from './sephora/parseProduct';
@@ -12,7 +12,7 @@ import path from 'path';
 const jobMap = new Map<string, JobRecord>();
 
 export async function startJob(request: JobRequest) {
-  const id = uuidv4();
+  const id = crypto.randomUUID();
   const status: JobStatus = {
     id,
     startedAt: new Date().toISOString(),
