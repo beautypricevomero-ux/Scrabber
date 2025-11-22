@@ -1,5 +1,6 @@
 import axios from 'axios';
-import * as cheerio from 'cheerio';
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const cheerio: typeof import('cheerio') = require('cheerio');
 import { selectors } from './selectors';
 
 const PRODUCT_REGEX = /\/p\//;
