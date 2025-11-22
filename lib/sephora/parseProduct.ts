@@ -63,7 +63,9 @@ export async function parseProduct(url: string, dynamic: boolean): Promise<RawPr
   });
 
   const tags: string[] = [];
-  $('[data-at*=tag], .TagList li').each((_, el) => tags.push(cleanText($(el).text())));
+  $('[data-at*=tag], .TagList li').each((_, el) => {
+    tags.push(cleanText($(el).text()));
+  });
 
   const handle = url.replace(/https?:\/\//, '').replace(/\W+/g, '-');
 
