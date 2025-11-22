@@ -1,0 +1,20 @@
+export const selectors = {
+  productLink: ['a[data-comp="ProductItemLink"]', 'a[href*="/p/"]', 'a[data-at="product_link"]'],
+  title: ['h1[data-at="product_name"]', 'h1.product-name'],
+  brand: ['a[data-at="brand_link"]', '.ProductBrand-link'],
+  price: ['span[data-at="price"]', '.product-price span'],
+  comparePrice: ['span[data-at="compare_at_price"]', '.product-price .crossed'],
+  description: ['div[data-at="product_description"]', '.product-description'],
+  image: ['img[data-comp="Image"]', 'img[data-at="product_image"]', 'img.primary-image'],
+  category: ['nav.breadcrumb a:last-of-type', 'ol.breadcrumb li:last-child'],
+  tagList: ['.ProductHighlights-list li', '.product-benefits li'],
+  availability: ['div[data-at="availability_message"]', '.availability'],
+  ingredients: ['[data-at="ingredients"]', '#ingredients'],
+  howToUse: ['[data-at="how_to_use"]', '#howToUse'],
+  ratingValue: ['meta[itemprop="ratingValue"]', 'span[data-at="rating_value"]'],
+  ratingCount: ['meta[itemprop="ratingCount"]', 'span[data-at="rating_count"]'],
+  reviewCount: ['span[data-at="review_count"]', '.review-count'],
+  seoTitle: ['title'],
+  seoDescription: ['meta[name="description"]'],
+  variant: ['[data-at="shade_name"]', '.shade-name']
+};
